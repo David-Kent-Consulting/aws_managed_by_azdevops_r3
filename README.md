@@ -33,21 +33,22 @@ Use this code at your own risk. There are no guarantees.
 
 FILE DESCRIPTIONS
 =================
-Dockerfile              The docker build config file to use to create a developer
-                        container.
-.profile                The service user file for the docker image
-main                    The directory where the terraform files are stored
-main/001_main.tf        Defines AWS region, TF version, and provider versions.
-                        Also defines the backend storage in AWS S3 storage.
-main/005_variables.tf   Defines the variables used by modules in
-                        this code package.
-main/010_network.tf     Defines the VPC that the EKS cluster will
-                        be bound to.
-main/020_iam_user.tf    Defines the test user for this demo
-main/030_eks.tf         Defines the EKS cluster, IAM roles, node
-                        groups, and other resources used by the
-                        cluster. Also attaches IAM roles and 
-                        assigns the test user to the roles.
+Dockerfile                       The docker build config file to use to create a developer
+                                 container.
+.profile                         The service user file for the docker image
+main                             The directory where the terraform files are stored
+main/001_main.tf                 Defines AWS region, TF version, and provider versions.
+                                 Also defines the backend storage in AWS S3 storage.
+main/005_variables.tf            Defines the variables used by modules in
+                                 this code package.
+main/010_network.tf              Defines the VPC that the EKS cluster will
+                                 be bound to.
+main/020_iam_user.tf             Defines the test user for this demo
+main/030_eks.tf                  Defines the EKS cluster, IAM roles, node
+                                 groups, and other resources used by the
+                                 cluster. Also attaches IAM roles and 
+                                 assigns the test user to the roles.
+main/040_container_registry.tf   Creates the container registry service
 
 
 CONTAINER INSTALLATION
