@@ -1,4 +1,9 @@
 module "vpc" {
+/*
+  Do not add the modules directory to the git repo. Comment out references to
+  the local copy and reference the AWSD GIT source when applying this code to
+  the master branch.
+*/
     # source = "../modules/terraform-aws-vpc/"
     source = "terraform-aws-modules/vpc/aws"
     version = "v3.14.4"

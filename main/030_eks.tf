@@ -1,5 +1,9 @@
 module "eks" {
-
+/*
+  Do not add the modules directory to the git repo. Comment out references to
+  the local copy and reference the AWSD GIT source when applying this code to
+  the master branch.
+*/
   # source = "../modules/terraform-aws-eks"
   source = "terraform-aws-modules/eks/aws"
   version = "v18.29.0"
