@@ -1,0 +1,25 @@
+pool:
+  vmImage: ubuntu-latest
+
+# stage-1: Terraform Validate stage
+#   Step-1: Publish artifacts to pipeline
+#   Step-2: Install latest stable version of terraform
+#   Step-3: Validate terraform manifests
+
+stages:
+  - stage: TerraformValidateStage1
+    jobs:
+      - job: TerraformValidateJob
+        continueOnError: false
+        steps:
+
+        - task: PublishPipelineArtifact@1
+          inputs:
+            targetPath: '$(System.DefaultWorkingDirectory)'
+            artifact: 'terraform-manifests-outs'
+            publishLocation: 'pipeline'
+
+        - task: Bash@3
+          inputs:
+            targetType: 'inline'
+            script: '/bin/ls'
