@@ -18,7 +18,6 @@ terraform {
     # block. The terraform documentation leaves a lot to be desired, so please be
     # mindful to follow the practice demonstrated below.
 
-
     required_version = ">= 1.2.5"
 
     required_providers {
